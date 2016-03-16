@@ -1,0 +1,24 @@
+// bower:scss
+@import "bower_components/reset-scss/reset.scss";
+@import "bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "bower_components/sass-mediaqueries/_media-queries.scss";
+// endbower
+
+// globals
+@import 'variables';
+@import 'animations';
+@import 'helpers';
+@import 'base';
+
+// components
+@import 'buttons';
+@import 'call-to-action';
+@import 'loader';
+@import 'logo';
+@import 'navigations';
+@import 'socmed';
+
+// layouts
+@import 'header';
+@import 'main-content';
+@import 'main-photo';

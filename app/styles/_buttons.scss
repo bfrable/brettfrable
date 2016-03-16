@@ -1,0 +1,15 @@
+.button {
+  @include transition();
+  background: $button;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 20px 50px;
+  text-decoration: none;
+  &:hover {
+    background: $button-hover;
+  }
+}

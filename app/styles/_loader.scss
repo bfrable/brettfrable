@@ -1,0 +1,18 @@
+#loader {
+  animation: animate 1.5s linear infinite;
+  clip: rect(0, 80px, 80px, 40px);
+  height: 80px;
+  left: calc(50% - 40px);
+  position: absolute;
+  top: calc(50% - 40px);
+  width: 80px;
+  &:after {
+    animation: animate2 1.5s ease-in-out infinite;
+    border-radius: 50%;
+    clip: rect(0, 80px, 80px, 40px);
+    content:'';
+    height: 80px;
+    position: absolute;
+    width: 80px;
+  }
+}

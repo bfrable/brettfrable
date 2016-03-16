@@ -1,0 +1,25 @@
+.main-content {
+  @include transition(1s);
+  box-sizing: border-box;
+  color: $black;
+  margin: 25px 0 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 50%;
+  .loaded & {
+    opacity: 1;
+  }
+  @include mq($max-width: 765px) {
+    width: 100%;
+  }
+}
+
+.heading {
+  @include transition(.5s);
+  border-bottom: 1px solid #ececec;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+}

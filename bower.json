@@ -1,0 +1,15 @@
+{
+  "name": "portfolio2",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "reset-scss": "*",
+    "bourbon": "^4.2.6",
+    "sass-mediaqueries": "^1.6.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "reset-scss": "*"
+  }
+}

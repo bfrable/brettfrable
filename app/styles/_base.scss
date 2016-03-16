@@ -1,0 +1,47 @@
+body {
+  background: $body;
+  color: $text;
+  font-family: 'Oxygen', Helvetica, Arial, sans-serif;
+}
+
+h1, h2 {
+  color: $black;
+  letter-spacing: 1px;
+  line-height: inherit;
+}
+
+h1  {
+  font-family: 'Roboto Slab';
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  margin: 10px 0;
+  span {
+    font-weight: 600;
+  }
+}
+
+h2 {
+  font-family: 'Roboto Slab';
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px;
+  text-transform: lowercase;
+}
+
+p {
+  @include transition;
+  line-height: 30px;
+  margin: 30px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+.wrapper {
+  padding: 50px;
+  @include mq($max-width: 765px) {
+    padding: 0 25px 25px;
+  }
+}
