@@ -2,7 +2,7 @@
 
 var angular;
 
-var app = angular.module('portfolio', ['ui.router']);
+var app = angular.module('portfolio', ['ui.router', 'ngAnimate']);
 
 app.controller('mainCtrl', function($scope, $timeout){
 
@@ -10,7 +10,7 @@ app.controller('mainCtrl', function($scope, $timeout){
 
     $timeout(function(){
         $scope.animateIn = true;
-    }, 1000);
+    }, 2000);
 
     $scope.showNav = function () {
         $scope.navOpen = !$scope.navOpen;
