@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Verizon",
+    "image": "./images/verizon.jpg",
+    "imageDescription": "tv.verizon.com",
+    "description": "At Synacor, I worked on the Powerplay TV Everywhere Search & Discovery Product. It’s a rich mobile experience, HTML5 based, where subscribers can view their TV favorites across all screens and devices, including native apps.",
+    "url": "http://tv.verizon.com"
+  },
+  {
+    "title": "Engage",
+    "image": "./images/engage.jpg",
+    "imageDescription": "engage",
+    "description": "Engage is an interactive agency whose clients include fortune 500 companies, trade associations, and center/right political organizations. At Engage I developed slick user interfaces using HTML5, CSS3, Scss and Javascript. Also using frameworks like Laravel and CodeIgniter.",
+    "url": "http://enga.ge"
+  },
+  {
+    "title": "Statefarm",
+    "image": "./images/statefarm.jpg",
+    "imageDescription": "statefarm",
+    "description": "Developed multiple marketing experiences for Statefarm using HTML5, Scss, Javascript and PHP.",
+    "url": "http://quotes.statefarm.com?lp=1003"
+  }
+]

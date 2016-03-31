@@ -22,49 +22,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Slab:400,300|Oxygen:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
-<nav id="main-nav">
-    <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Recent Work</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+<body ng-app="portfolio" ng-controller="mainCtrl"  ng-class="{'open': navOpen, 'loaded': animateIn}">
+
+<main-nav></main-nav>
 
 <header>
     <div class="logo"></div>
-    <div id="menu-trigger"><i class="fa fa-bars"></i></div>
+    <div id="menu-trigger" ng-click="showNav()"><i class="fa fa-bars" ng-class="{'fa-times': navOpen, 'fa-bars': !navOpen}"></i></div>
 </header>
 
 <section class="main-photo"></section>
 
-<section class="main-content" role="main">
-    <div class="wrapper">
-        <div class="heading">
-            <h1><span>B</span>rett <span>F</span>rable</h1>
-            <h2>Front End Developer</h2>
-            <nav class="social">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/brett-frable-3022bb78" class="linkedin" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-                    <li><a href="http://www.github.com/bfrable" class="github" target="_blank"><i class="fa fa-github-square"></i></a></li>
-                    <li><a href="http://www.twitter.com/brettfrable" class="twitter" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
-                    <li><a href="http://www.instagram.com/brettfrable" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-        <p>I bring a unique perspective to front end development and user interface design. Each position I have held has transmuted my skillset and goals towards forward-thinking technology. I am obsessed with expanding my craft, solving challenging problems and staying on the bleeding edge.</p>
-        <p>I like to work alongside designers to see their vision come to life and pull off pixel perfection. I'm as comfortable mentoring others,
-            <br>as I am learning from them.</p>
+<section class="main-content" role="main" ui-view></section>
 
-        <div class="cta contact-me">
-            <p><strong>I am currently accepting new freelance opportunities.</strong></p>
-            <a href="mailto:brett@brettfrable.com" class="button">Contact Me</a>
-        </div>
-    </div>
-</section>
-
-<div id="loader"></div>
+<loader ng-show="!animateIn"></loader>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
@@ -79,11 +51,13 @@
 
 <!-- build:js scripts/vendor.js -->
 <!-- bower:js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
-<script src="scripts/main.js"></script>
+<script src="scripts/app.js"></script>
 <!-- endbuild -->
 </body>
 </html>

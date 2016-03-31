@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="heading int">
+        <h1>recent Work</h1>
+    </div>
+
+    <ul class="recent-work" ng-controller="workCtrl">
+        <li ng-repeat="project in projects">
+            <h2>{{project.title}}</h2>
+            <div class="project-image" style="background: transparent url('{{project.image}}') 0 0 no-repeat; background-size: cover;">
+            </div>
+            <div class="project-description">
+                <p>{{project.description}}</p>
+                <a class="button" href="{{project.url}}" target="_blank">Visit Project</a>
+            </div>
+        </li>
+    </ul>
+</div>

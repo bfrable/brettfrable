@@ -5,7 +5,9 @@
     "jquery": "~2.1.1",
     "reset-scss": "*",
     "bourbon": "^4.2.6",
-    "sass-mediaqueries": "^1.6.1"
+    "sass-mediaqueries": "^1.6.1",
+    "angular": "^1.5.3",
+    "angular-ui-router": "ui-router#^0.2.18"
   },
   "devDependencies": {
     "chai": "^3.5.0",
