@@ -1,5 +1,46 @@
-<div class="wrapper">
+<div class="wrapper" ng-controller="contactCtrl as contact" class="is-parent">
     <div class="heading int">
-        <h2>contact me</h2>
+        <h1>contact me</h1>
     </div>
+
+    <form name="contactForm" ng-show="!email.success" ng-submit="contact.sendEmail(contactForm.$valid)" novalidate>
+
+        <div>
+            <label for="name">Name</label>
+            <input name="name" type="text" ng-model="contact.name" placeholder="What's your name?" required ng-required="true">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input name="email" id="from" type="email" ng-model="contact.from" placeholder="Enter e-mail where you want to be reached" required ng-required="true" ng-pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" />
+        </div>
+
+        <div>
+            <label for="phone">Phone</label>
+            <input type="text"  ng-model="contact.phone" placeholder="Enter phone" ng-required="false" ng-minlength="10" ng-maxlength="11" ng-pattern="\d">
+        </div>
+
+        <div>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" ng-model="contact.subject" placeholder="Enter a subject" ng-required="false" />
+        </div>
+
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="content" cols="40" rows="5" ng-model="contact.message" placeholder="What would you like to discuss?" required ng-required="true"></textarea>
+        </div>
+
+        <div ng-hide="contactForm.$invalid">
+            <button type="submit" class="submit button">Lets talk</button>
+        </div>
+
+    </form>
+
+    <section class="thank-you" ng-show="email.success">
+        <h2>Thank you!</h2>
+        <p>I'm happy you took the time to reach out to me. I'm looking forward to our conversation. If it is of urgent nature, please
+            <br>feel free to call me at <strong>607.759.5415</strong></p>
+    </section>
+
+    <h1 class="email-status" ng-show="email.status" ng-mouseover="email.status = false">{{email.status}}</h1>
 </div>

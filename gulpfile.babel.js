@@ -35,7 +35,7 @@ function lint(files, options) {
 const testLintOptions = {
   env: {
     mocha: true
-  }
+  },
 };
 
 gulp.task('lint', lint('app/scripts/**/*.js'));

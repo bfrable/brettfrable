@@ -1,0 +1,70 @@
+form {
+  margin: 10px 0 0;
+  label {
+    color: $dark-blue;
+    font-weight: 900;
+    text-transform: lowercase;
+    font-size: 17px;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+  }
+  div {
+    margin: 0 0 20px;
+    position: relative;
+  }
+  input, textarea {
+    @include transition;
+    background: $white;
+    border: 0;
+    border-bottom: 3px solid $light-blue;
+    color: $light-blue;
+    box-sizing: border-box;
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+    padding: 20px 20px 17px;
+    position: relative;
+    width: 100%;
+    &::-webkit-input-placeholder {
+      color: $light-blue;
+    }
+    &:focus {
+      background: $dark-blue;
+      color: $white;
+      padding: 25px 25px 22px;
+      &::-webkit-input-placeholder {
+        color: $white;
+      }
+    }
+    &.ng-invalid {
+      border-bottom: 3px solid $red;
+    }
+    &.ng-untouched {
+      border-bottom: 3px solid $light-blue !important;
+    }
+    &.ng-touched.ng-valid {
+      border-bottom: 3px solid $green;
+    }
+  }
+  .button {
+    border: 0;
+    cursor: pointer;
+    margin: 15px 0;
+    outline: none;
+    text-transform: uppercase;
+  }
+}
+
+.email-status {
+  background: $dark-blue;
+  border-radius: 5px;
+  color: $white;
+  font-size: 15px;
+  padding: 20px;
+  position: fixed;
+  right: 6px;
+  top: -3px;
+  z-index: 99;
+}

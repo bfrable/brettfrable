@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Slab:400,300|Oxygen:400,700' rel='stylesheet' type='text/css'>
+    
 </head>
 
 <body ng-app="portfolio" ng-controller="mainCtrl"  ng-class="{'open': navOpen, 'loaded': animateIn}">
@@ -58,7 +59,14 @@
 <!-- endbuild -->
 
 <!-- build:js scripts/main.js -->
-<script src="scripts/app.js"></script>
 <!-- endbuild -->
+
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/work.js"></script>
+<script src="scripts/controllers/contact.js"></script>
+<script src="scripts/directives/nav.js"></script>
+<script src="scripts/directives/loader.js"></script>
+
 </body>
 </html>

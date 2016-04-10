@@ -2,7 +2,6 @@
   "name": "portfolio2",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
     "reset-scss": "*",
     "bourbon": "^4.2.6",
     "sass-mediaqueries": "^1.6.1",

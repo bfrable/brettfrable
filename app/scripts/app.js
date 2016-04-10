@@ -4,29 +4,9 @@ var angular;
 
 var app = angular.module('portfolio', ['ui.router', 'ngAnimate']);
 
-app.controller('mainCtrl', function($scope, $timeout){
+app.config(function($stateProvider, $urlRouterProvider, $anchorScrollProvider){
 
-    $scope.animateIn = false;
-
-    $timeout(function(){
-        $scope.animateIn = true;
-    }, 2000);
-
-    $scope.showNav = function () {
-        $scope.navOpen = !$scope.navOpen;
-    };
-
-});
-
-app.controller('workCtrl', function($scope, $http) {
-
-    $http.get('./scripts/projects.json').then(function(response) {
-        $scope.projects = response.data;
-    });
-
-});
-
-app.config(function($stateProvider, $urlRouterProvider){
+    $anchorScrollProvider.disableAutoScrolling();
 
     $urlRouterProvider.otherwise('/about');
 
@@ -43,18 +23,4 @@ app.config(function($stateProvider, $urlRouterProvider){
             url: '/contact',
             templateUrl: './views/contact.html'
         });
-});
-
-app.directive('mainNav', function(){
-    return {
-        templateUrl: './partials/nav.html',
-        replace: true
-    };
-});
-
-app.directive('loader', function(){
-    return {
-        templateUrl: './partials/loader.html',
-        replace: true
-    };
 });

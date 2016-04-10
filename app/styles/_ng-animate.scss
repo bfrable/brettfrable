@@ -1,13 +1,10 @@
 .loaded {
   .main-content {
-    &.ng-leave {
-      opacity: 0;
-    }
-
     /* start 'enter' transition */
     &.ng-enter {
       /* transition on enter for .5s */
-      transition: 1s;
+      transition: .5s;
+      transition-delay: .5s;
 
       /* start with opacity 0 (invisible) */
       opacity: 0;
@@ -19,6 +16,20 @@
       /* end with opacity 1 (fade in) */
       opacity: 1;
       top: 0;
+    }
+
+    /* start 'leave' transition */
+    &.ng-leave {
+      transition: .5s;
+      opacity: 1;
+      top: 0;
+    }
+
+    /* end 'enter' transition */
+    &.ng-leave-active {
+      /* end with opacity 1 (fade in) */
+      opacity: 0;
+      top: 100%;
     }
   }
 }
