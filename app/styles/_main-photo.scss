@@ -36,6 +36,10 @@
     height: 200px;
     position: relative;
     width: 100%;
+    .open & {
+      left: 0;
+      top: 0;
+    }
   }
   &--full-size {
     background-position: right center;

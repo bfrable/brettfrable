@@ -33,9 +33,13 @@
     <div id="menu-trigger" ng-click="showNav()"><i class="fa fa-bars" ng-class="{'fa-times': navOpen, 'fa-bars': !navOpen}"></i></div>
 </header>
 
-<section class="main-photo"></section>
+<div class="right-container">
 
-<section class="main-content" role="main" ui-view></section>
+    <section class="main-photo"></section>
+
+    <section class="main-content" role="main" ui-view></section>
+    
+</div>
 
 <loader ng-show="!animateIn"></loader>
 
@@ -67,6 +71,8 @@
 <script src="scripts/controllers/contact.js"></script>
 <script src="scripts/directives/nav.js"></script>
 <script src="scripts/directives/loader.js"></script>
+<script src="scripts/directives/instagram.js"></script>
+
 
 </body>
 </html>

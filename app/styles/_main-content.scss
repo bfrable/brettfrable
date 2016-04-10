@@ -1,5 +1,22 @@
+.right-container {
+  @include mq($max-width: 765px) {
+    @include transition(.5s);
+    right: -0;
+    width: 100%;
+  }
+  .open & {
+    @include mq($max-width: 765px) {
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      right: 0;
+      width: 50%;
+    }
+  }
+}
+
 .main-content {
-  @include transition(1s);
+  @include transition(.5s);
   box-sizing: border-box;
   color: $black;
   margin: 25px 0 0;
@@ -13,6 +30,7 @@
   }
   @include mq($max-width: 765px) {
     width: 100%;
+    top: 265px;
   }
 }
 

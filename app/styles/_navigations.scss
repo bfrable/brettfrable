@@ -27,9 +27,13 @@
   position: fixed;
   top: -365px;
   width: 50%;
-  //background: #2980B9 url('../images/pattern.png') 0 0 repeat;
   background: $light-blue;
   box-sizing: border-box;
+  @include mq($max-width: 765px) {
+    height: 100%;
+    left: -365px;
+    top: 0;
+  }
   li {
     @include transition(.7s);
     padding: 0px 0 0;
@@ -43,12 +47,19 @@
     font-size: 50px;
     font-weight: 900;
     text-decoration: none;
+    @include mq($max-width: 765px) {
+      font-size: 20px;
+    }
     &:hover {
       color: $dark-blue;
     }
   }
   .open & {
     top: 0;
+    @include mq($max-width: 765px) {
+      left: 0;
+      padding: 50px 20px;
+    }
     li {
       padding: 50px 0 0;
     }
