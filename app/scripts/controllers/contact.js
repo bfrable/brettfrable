@@ -7,6 +7,11 @@ app.controller('contactCtrl', function($scope, $http) {
         success: false
     };
 
+    $scope.patterns = {
+        email: '[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})',
+        phone: '\\d*'
+    };
+
     this.sendEmail = function(isValid) {
 
         if (isValid) {
@@ -20,7 +25,7 @@ app.controller('contactCtrl', function($scope, $http) {
 
             $scope.email.status = 'Sending your message...';
 
-            $http.post('http://localhost:3000/send', data).
+            $http.post('http://brettfrable.com:3000/send', data).
             success(function () {
                 $scope.email.status = 'Message Sent!';
                 $scope.email.success = true;

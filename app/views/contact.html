@@ -12,12 +12,12 @@
 
         <div>
             <label for="email">Email</label>
-            <input name="email" id="from" type="email" ng-model="contact.from" placeholder="Enter e-mail where you want to be reached" required ng-required="true" ng-pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" />
+            <input name="email" id="from" type="email" ng-model="contact.from" placeholder="Enter e-mail where you want to be reached" required ng-required="true" ng-pattern="patterns.email" />
         </div>
 
         <div>
             <label for="phone">Phone</label>
-            <input type="text"  ng-model="contact.phone" placeholder="Enter phone" ng-required="false" ng-minlength="10" ng-maxlength="11" ng-pattern="\d">
+            <input type="text"  ng-model="contact.phone" placeholder="Enter phone" ng-required="false" ng-minlength="10" ng-maxlength="11" ng-pattern="patterns.phone">
         </div>
 
         <div>
